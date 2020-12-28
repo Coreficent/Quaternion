@@ -6,13 +6,13 @@
     public class Main : MonoBehaviour
     {
         // initializer
-        void Start()
+        private void Start()
         {
             DebugLogger.Log("main initialized");
         }
 
         // game loop
-        void Update()
+        private void Update()
         {
 
         }
