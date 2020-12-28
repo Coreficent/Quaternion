@@ -5,7 +5,7 @@
     public class DebugLogger
     {
         private static readonly string _delimiter = "::";
-        private static readonly string _ender = "";
+        private static readonly string _ender = ".";
 
         public static void ToDo(object message)
         {
