@@ -7,19 +7,16 @@
     {
         [SerializeField] private GameObject _target;
 
-        private void Start()
+        protected void Start()
         {
             SanityCheck.Check(this, _target);
         }
 
-        private void Update()
+        protected void Update()
         {
+            DebugRender.Draw(transform.position, _target.transform.position, Color.red);
 
-        }
-
-        private void LookAt()
-        {
-            DebugLogger.ToDo("implement look at");
+            transform.rotation = Quaternion.LookRotation(_target.transform.position - transform.position);
         }
     }
 }
