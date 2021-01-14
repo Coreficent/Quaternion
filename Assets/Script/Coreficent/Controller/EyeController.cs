@@ -6,6 +6,7 @@
     public class EyeController : MonoBehaviour
     {
         [SerializeField] private GameObject _target;
+        [SerializeField] private float _rotationSpeed = 45.0f;
 
         protected void Start()
         {
@@ -16,7 +17,7 @@
         {
             DebugRender.Draw(transform.position, _target.transform.position, Color.red);
 
-            transform.rotation = Quaternion.LookRotation(_target.transform.position - transform.position);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_target.transform.position - transform.position), _rotationSpeed * Time.deltaTime);
         }
     }
 }
