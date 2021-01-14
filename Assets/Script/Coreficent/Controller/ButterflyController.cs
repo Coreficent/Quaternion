@@ -2,7 +2,6 @@
 {
     using UnityEngine;
 
-    // controls butterfly movements with user input
     public class ButterflyController : MonoBehaviour
     {
 

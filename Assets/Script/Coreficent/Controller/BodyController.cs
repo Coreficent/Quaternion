@@ -16,20 +16,17 @@
 
         protected void Update()
         {
-            Vector3 from = _target.transform.position;
+            Vector3 from = transform.position;
             from.y = 0.0f;
-            Vector3 to = transform.position;
+            Vector3 to = _target.transform.position;
             to.y = 0.0f;
 
             DebugRender.Draw(from, to, Color.green);
+            DebugRender.Draw(from, from + transform.forward * to.magnitude, Color.blue);
 
             Vector3 direction = to - from;
 
-            float angle = Vector3.Angle(direction, transform.forward);
-
-            DebugLogger.Log(angle);
-
-            if (angle > _cullingAngle)
+            if (Vector3.Angle(direction, transform.forward) > _cullingAngle)
             {
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(direction), _rotationSpeed * Time.deltaTime);
             }
