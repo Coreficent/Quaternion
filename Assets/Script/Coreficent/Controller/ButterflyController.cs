@@ -7,14 +7,16 @@
 
         [SerializeField] private float _speed = 1.0f;
 
+        private Rigidbody _rigidbody;
+
         private Vector3 _possitionFinal = Vector3.zero;
 
         protected void Start()
         {
-
+            _rigidbody = GetComponent<Rigidbody>();
         }
 
-        protected void Update()
+        protected void FixedUpdate()
         {
             _possitionFinal = Vector3.zero;
             if (Input.GetKey(KeyCode.Q))
@@ -41,7 +43,7 @@
             {
                 _possitionFinal.x += -_speed * Time.deltaTime;
             }
-            transform.position += _possitionFinal;
+            _rigidbody.MovePosition(transform.position + _possitionFinal);
         }
     }
 }
