@@ -13,17 +13,22 @@
 
         private InputField q_InputField;
 
+
+
+
+
         void Start()
         {
             CoordinateText = GetComponent<Text>();
 
             quaternion = gameObject.GetComponent<Slider>();
             q_InputField = gameObject.GetComponent<InputField>();
-        }
 
+        }
 
         public void textUpdate(float value)
         {
+
             CoordinateText.text = value.ToString();
         }
 
