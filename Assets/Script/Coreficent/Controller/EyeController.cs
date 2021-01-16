@@ -37,11 +37,11 @@
 
             //transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_target.transform.position - transform.position), _rotationSpeed * Time.deltaTime);
 
-            DebugLogger.Log("QuaternionCurrent", QuaternionCurrent.x, QuaternionCurrent.y, QuaternionCurrent.z, QuaternionCurrent.w);
-            DebugLogger.Log("QuaternionTransform", QuaternionTransform.x, QuaternionTransform.y, QuaternionTransform.z, QuaternionTransform.w);
-            DebugLogger.Log("QuaternionFinal", QuaternionFinal.x, QuaternionFinal.y, QuaternionFinal.z, QuaternionFinal.w);
+            //DebugLogger.Log("QuaternionCurrent", QuaternionCurrent.x, QuaternionCurrent.y, QuaternionCurrent.z, QuaternionCurrent.w);
+            //DebugLogger.Log("QuaternionTransform", QuaternionTransform.x, QuaternionTransform.y, QuaternionTransform.z, QuaternionTransform.w);
+            //DebugLogger.Log("QuaternionFinal", QuaternionFinal.x, QuaternionFinal.y, QuaternionFinal.z, QuaternionFinal.w);
 
-            DebugLogger.Log("Angles", QuaternionCurrent.eulerAngles);
+            //DebugLogger.Log("Angles", QuaternionCurrent.eulerAngles);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, QuaternionFinal, _rotationSpeed * Time.deltaTime);
         }
