@@ -19,11 +19,11 @@
         protected void FixedUpdate()
         {
             _possitionFinal = Vector3.zero;
-            if (Input.GetKey(KeyCode.Keypad5))
+            if (Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.Keypad3))
             {
                 _possitionFinal.z += _speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.Keypad0))
+            if (Input.GetKey(KeyCode.Keypad7) || Input.GetKey(KeyCode.Keypad9))
             {
                 _possitionFinal.z += -_speed * Time.deltaTime;
             }
