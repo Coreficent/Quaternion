@@ -13,7 +13,7 @@
             VisualCamera = GameObject.Find("Minion Camera");
             bubbleCamera = GameObject.Find("Inside Bubble Camera");
 
-            VisualCamera.SetActive(false);
+            bubbleCamera.SetActive(false);
 
         }
 

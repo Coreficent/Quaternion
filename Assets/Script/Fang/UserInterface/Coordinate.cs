@@ -24,7 +24,7 @@
             
 
 
-            ball.localRotation = sliderControl.currentRotation;
+            //ball.localRotation = sliderControl.QuaternionFinal;
 
 
         }

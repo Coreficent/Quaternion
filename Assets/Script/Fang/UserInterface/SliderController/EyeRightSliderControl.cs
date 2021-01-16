@@ -9,14 +9,14 @@
     public class EyeRightSliderControl : MonoBehaviour
     {
         //private EyeController eyecontroller;
-        public Quaternion currentRotation;
-        Quaternion finalBodyRotation;
-        Quaternion identityRotation;
+        //public Quaternion currentRotation;
+        //Quaternion finalBodyRotation;
+        //Quaternion identityRotation;
+        private EyeController eyecontroller;
 
+        //private GameObject eyeRight;
 
-        private GameObject eyeRight;
-
-        public GameObject Minion;
+        //public GameObject Minion;
         //private GameObject eyeLeft;
         //private GameObject body;
 
@@ -34,11 +34,13 @@
         // Start is called before the first frame update
         void Start()
         {
-            identityRotation = Minion.transform.rotation;
+            //identityRotation = Minion.transform.rotation;
 
-            eyeRight = GameObject.Find("EyeRight");
+            //eyeRight = GameObject.Find("EyeRight");
             //eyeLeft = GameObject.Find("EyeLeft");
             //body = GameObject.Find("EyeLeft");
+
+            eyecontroller = FindObjectOfType<EyeController>();
 
 
         }
@@ -54,21 +56,21 @@
             //Debug.Log(eyeRight.transform.eulerAngles.z);
 
             // Euler Angle
-            xSlider.value = eyeRight.transform.rotation.eulerAngles.x;
-            ySlider.value = eyeRight.transform.rotation.eulerAngles.y;
-            zSlider.value = eyeRight.transform.rotation.eulerAngles.z;
+            xSlider.value = transform.rotation.eulerAngles.x;
+            ySlider.value = transform.rotation.eulerAngles.y;
+            zSlider.value = transform.rotation.eulerAngles.z;
 
             // = current_eyeRightX;
             // = current_eyeRightY;
             // = current_eyeRightZ;
 
-            finalBodyRotation = identityRotation * Minion.transform.localRotation;
-            currentRotation = finalBodyRotation * eyeRight.transform.localRotation;
+            //finalBodyRotation = identityRotation * Minion.transform.localRotation;
+            //currentRotation = finalBodyRotation * eyeRight.transform.localRotation;
 
-            qxSlider.value = currentRotation.x;
-            qySlider.value = currentRotation.y;
-            qzSlider.value = currentRotation.z;
-            qwSlider.value = currentRotation.w;
+            qxSlider.value = eyecontroller.QuaternionFinal.x;
+            qySlider.value = eyecontroller.QuaternionFinal.y;
+            qzSlider.value = eyecontroller.QuaternionFinal.z;
+            qwSlider.value = eyecontroller.QuaternionFinal.w;
 
 
         }
