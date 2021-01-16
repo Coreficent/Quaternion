@@ -1,7 +1,6 @@
 ﻿namespace Fang.UserInterface
 {
-    using System.Collections;
-    using System.Collections.Generic;
+    using Coreficent.Utility;
     using UnityEngine;
     using UnityEngine.UI;
 
@@ -9,24 +8,21 @@
     {
         Text CoordinateText;
 
-        private Slider quaternion;
+        private Slider _quaternionSlider;
+        private InputField _inputField;
 
-        private InputField q_InputField;
-
-
-
-
-
-        void Start()
+        protected void Start()
         {
+            SanityCheck.Check(this, CoordinateText);
+
             CoordinateText = GetComponent<Text>();
 
-            quaternion = gameObject.GetComponent<Slider>();
-            q_InputField = gameObject.GetComponent<InputField>();
+            _quaternionSlider = gameObject.GetComponent<Slider>();
+            _inputField = gameObject.GetComponent<InputField>();
 
         }
 
-        public void textUpdate(float value)
+        public void TextUpdate(float value)
         {
 
             CoordinateText.text = value.ToString();
@@ -36,8 +32,8 @@
         public void UpdateValueFromFloat(float value)
         {
             Debug.Log("float value changed: " + value);
-            if (quaternion) { quaternion.value = value; }
-            if (q_InputField) { q_InputField.text = value.ToString(); }
+            if (_quaternionSlider) { _quaternionSlider.value = value; }
+            if (_inputField) { _inputField.text = value.ToString(); }
 
         }
 
