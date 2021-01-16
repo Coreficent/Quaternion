@@ -19,27 +19,27 @@
         protected void FixedUpdate()
         {
             _possitionFinal = Vector3.zero;
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.Keypad5))
             {
                 _possitionFinal.z += _speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Keypad0))
             {
                 _possitionFinal.z += -_speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.Keypad8))
             {
                 _possitionFinal.y += _speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.Keypad2))
             {
                 _possitionFinal.y += -_speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.Keypad6))
             {
                 _possitionFinal.x += _speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.Keypad4))
             {
                 _possitionFinal.x += -_speed * Time.deltaTime;
             }
