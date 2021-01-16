@@ -5,7 +5,7 @@
     using Coreficent.Controller;
     using Coreficent.Utility;
 
-    public class EyeSliderController : MonoBehaviour
+    public class EyeValueDisplayer : MonoBehaviour
     {
         public EyeController EyeController;
 
@@ -32,7 +32,6 @@
             DebugLogger.Log("eye controller is on", this);
             SanityCheck.Check(this, EyeController, QxSlider, QySlider, QzSlider, QwSlider, XSlider, YSlider, ZSlider, QxText, QyText, QzText, QwText, XText, YText, ZText);
         }
-
 
         protected void Update()
         {
