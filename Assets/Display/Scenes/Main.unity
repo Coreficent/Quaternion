@@ -31734,6 +31734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9dcc6e7dfb3978409a24fe08d483a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eyecontroller: {fileID: 0}
   qxSlider: {fileID: 1231852004}
   qySlider: {fileID: 1264145964}
   qzSlider: {fileID: 1756885560}
@@ -32605,6 +32606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9dcc6e7dfb3978409a24fe08d483a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eyecontroller: {fileID: 0}
   qxSlider: {fileID: 1033443460}
   qySlider: {fileID: 315299744}
   qzSlider: {fileID: 1914803150}
@@ -79966,6 +79968,7 @@ GameObject:
   - component: {fileID: 2136703573}
   - component: {fileID: 2136703575}
   - component: {fileID: 2136703574}
+  - component: {fileID: 2136703576}
   m_Layer: 0
   m_Name: Right Eye Panel
   m_TagString: Untagged
@@ -80032,6 +80035,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136703572}
   m_CullTransparentMesh: 0
+--- !u!114 &2136703576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136703572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b0f0b475b46cb4f937505cec7df825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EyeController: {fileID: 865302729}
+  QxSlider: {fileID: 1033443460}
+  QySlider: {fileID: 315299744}
+  QzSlider: {fileID: 1914803150}
+  QwSlider: {fileID: 163874123}
+  XSlider: {fileID: 9813615}
+  YSlider: {fileID: 1802226485}
+  ZSlider: {fileID: 744502281}
 --- !u!1001 &2137674045
 PrefabInstance:
   m_ObjectHideFlags: 0

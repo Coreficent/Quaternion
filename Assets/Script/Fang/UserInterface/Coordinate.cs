@@ -7,14 +7,14 @@
     public class Coordinate : MonoBehaviour
     {
 
-        private EyeRightSliderControl sliderControl;
+        private EyeSliderController sliderControl;
         public Transform ball;
 
 
         // Start is called before the first frame update
         void Start()
         {
-            sliderControl = FindObjectOfType<EyeRightSliderControl>();
+            sliderControl = FindObjectOfType<EyeSliderController>();
 
         }
 
