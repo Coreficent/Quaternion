@@ -1210,7 +1210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44341876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.872, z: 0.288}
+  m_LocalPosition: {x: 0, y: 0.875, z: 0.275}
   m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
   m_Children:
   - {fileID: 865302728}
@@ -7541,7 +7541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 133.6, y: -10.891024}
+  m_AnchoredPosition: {x: 38.433777, y: -26.44773}
   m_SizeDelta: {x: 53.72586, y: 26.04432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196152627
@@ -23463,7 +23463,7 @@ GameObject:
   - component: {fileID: 593304916}
   - component: {fileID: 593304915}
   m_Layer: 0
-  m_Name: Left Eye
+  m_Name: Right Eye Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31699,7 +31699,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 840148881}
-  - component: {fileID: 840148882}
   m_Layer: 0
   m_Name: EyeLeft
   m_TagString: Untagged
@@ -31722,26 +31721,6 @@ Transform:
   m_Father: {fileID: 44341877}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &840148882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840148880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9dcc6e7dfb3978409a24fe08d483a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _eyecontroller: {fileID: 0}
-  qxSlider: {fileID: 1231852004}
-  qySlider: {fileID: 1264145964}
-  qzSlider: {fileID: 1756885560}
-  qwSlider: {fileID: 234737135}
-  xSlider: {fileID: 716067202}
-  ySlider: {fileID: 2045902551}
-  zSlider: {fileID: 137132119}
 --- !u!1 &842587298
 GameObject:
   m_ObjectHideFlags: 0
@@ -32545,7 +32524,6 @@ GameObject:
   - component: {fileID: 865302728}
   - component: {fileID: 865302729}
   - component: {fileID: 865302730}
-  - component: {fileID: 865302731}
   m_Layer: 0
   m_Name: EyeRight
   m_TagString: Untagged
@@ -32594,26 +32572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d5e3093c9740646939a9db5e02dac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &865302731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865302727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9dcc6e7dfb3978409a24fe08d483a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _eyecontroller: {fileID: 0}
-  qxSlider: {fileID: 1033443460}
-  qySlider: {fileID: 315299744}
-  qzSlider: {fileID: 1914803150}
-  qwSlider: {fileID: 163874123}
-  xSlider: {fileID: 9813615}
-  ySlider: {fileID: 1802226485}
-  zSlider: {fileID: 744502281}
 --- !u!1 &866940704
 GameObject:
   m_ObjectHideFlags: 0
@@ -38455,29 +38413,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1096646549}
-        m_MethodName: UpdateText
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1526416670}
-        m_MethodName: UpdateValueFromFloat
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1036043533
 GameObject:
   m_ObjectHideFlags: 0
@@ -80052,9 +79988,16 @@ MonoBehaviour:
   QySlider: {fileID: 315299744}
   QzSlider: {fileID: 1914803150}
   QwSlider: {fileID: 163874123}
+  QxText: {fileID: 1096646550}
+  QyText: {fileID: 335069448}
+  QzText: {fileID: 1062677160}
+  QwText: {fileID: 2006049332}
   XSlider: {fileID: 9813615}
   YSlider: {fileID: 1802226485}
   ZSlider: {fileID: 744502281}
+  XText: {fileID: 196152628}
+  YText: {fileID: 1011764508}
+  ZText: {fileID: 843961806}
 --- !u!1001 &2137674045
 PrefabInstance:
   m_ObjectHideFlags: 0
