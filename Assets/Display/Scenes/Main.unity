@@ -361,8 +361,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 916431215}
   m_HandleRect: {fileID: 1746507506}
   m_Direction: 0
-  m_MinValue: -180
-  m_MaxValue: 400
+  m_MinValue: 0
+  m_MaxValue: 360
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -27984,8 +27984,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 98902475}
   m_HandleRect: {fileID: 268494883}
   m_Direction: 0
-  m_MinValue: -180
-  m_MaxValue: 180
+  m_MinValue: 0
+  m_MaxValue: 360
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -69161,8 +69161,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1593264752}
   m_HandleRect: {fileID: 598715571}
   m_Direction: 0
-  m_MinValue: -180
-  m_MaxValue: 180
+  m_MinValue: 0
+  m_MaxValue: 360
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -76600,7 +76600,7 @@ GameObject:
   - component: {fileID: 2045124609}
   - component: {fileID: 2045124610}
   m_Layer: 0
-  m_Name: Display
+  m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

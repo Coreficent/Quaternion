@@ -35,11 +35,11 @@
             {
                 _possitionFinal.y += -_speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.Keypad6))
+            if (Input.GetKey(KeyCode.Keypad4))
             {
                 _possitionFinal.x += _speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.Keypad4))
+            if (Input.GetKey(KeyCode.Keypad6))
             {
                 _possitionFinal.x += -_speed * Time.deltaTime;
             }
