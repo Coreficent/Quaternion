@@ -41,8 +41,6 @@
             //body = GameObject.Find("EyeLeft");
 
             eyecontroller = FindObjectOfType<EyeController>();
-
-
         }
 
 
@@ -71,9 +69,6 @@
             qySlider.value = eyecontroller.QuaternionFinal.y;
             qzSlider.value = eyecontroller.QuaternionFinal.z;
             qwSlider.value = eyecontroller.QuaternionFinal.w;
-
-
         }
-
     }
 }

@@ -4,30 +4,25 @@
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class ShowSliderValue : MonoBehaviour
+    public class SliderValueDisplayer : MonoBehaviour
     {
-        public Text CoordinateText;
-
+        private Text _coordinateText;
         private Slider _quaternionSlider;
         private InputField _inputField;
 
         protected void Start()
         {
-            SanityCheck.Check(this, CoordinateText);
+            _coordinateText = GetComponent<Text>();
+            _quaternionSlider = GetComponent<Slider>();
+            _inputField = GetComponent<InputField>();
 
-            CoordinateText = GetComponent<Text>();
-
-            _quaternionSlider = gameObject.GetComponent<Slider>();
-            _inputField = gameObject.GetComponent<InputField>();
-
+            SanityCheck.Check(this, _coordinateText, _quaternionSlider, _inputField);
         }
 
-        public void TextUpdate(float value)
+        public void UpdateText(float value)
         {
-
-            CoordinateText.text = value.ToString();
+            _coordinateText.text = value.ToString();
         }
-
 
         public void UpdateValueFromFloat(float value)
         {
