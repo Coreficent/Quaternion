@@ -6,7 +6,7 @@
 
     public class ShowSliderValue : MonoBehaviour
     {
-        Text CoordinateText;
+        public Text CoordinateText;
 
         private Slider _quaternionSlider;
         private InputField _inputField;
