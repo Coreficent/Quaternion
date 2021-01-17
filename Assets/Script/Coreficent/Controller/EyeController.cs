@@ -56,5 +56,17 @@
         {
             Tracking = !Tracking;
         }
+
+        public void ActivateLeft()
+        {
+            LeftEyeOn = true;
+            RightEyeOn = false;
+        }
+
+        public void ActivateRight()
+        {
+            RightEyeOn = true;
+            LeftEyeOn = false;
+        }
     }
 }
