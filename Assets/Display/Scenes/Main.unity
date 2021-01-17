@@ -2786,7 +2786,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eye Tracking Toggle
+  m_Text: Toggle Eye Tracking
 --- !u!222 &67090820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48438,7 +48438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2193 Enter into the Equation Bubble \u2193"
+  m_Text: "\u2193 Enter the Equation Bubble \u2193"
 --- !u!222 &966093816
 CanvasRenderer:
   m_ObjectHideFlags: 0
