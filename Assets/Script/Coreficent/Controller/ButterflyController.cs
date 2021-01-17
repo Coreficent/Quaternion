@@ -16,6 +16,14 @@
             _rigidbody = GetComponent<Rigidbody>();
         }
 
+        protected void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Keypad5))
+            {
+                EyeController.Tracking = !EyeController.Tracking;
+            }
+        }
+
         protected void FixedUpdate()
         {
             _possitionFinal = Vector3.zero;
@@ -47,3 +55,4 @@
         }
     }
 }
+

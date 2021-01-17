@@ -5,6 +5,10 @@
 
     public class EyeController : MonoBehaviour
     {
+        public static bool Tracking = true;
+        public static bool LeftEyeOn = false;
+        public static bool RightEyeOn = true;
+
         [SerializeField] private GameObject _target;
         [SerializeField] private float _rotationSpeed = 45.0f;
 
@@ -42,8 +46,15 @@
             //DebugLogger.Log("QuaternionFinal", QuaternionFinal.x, QuaternionFinal.y, QuaternionFinal.z, QuaternionFinal.w);
 
             //DebugLogger.Log("Angles", QuaternionCurrent.eulerAngles);
+            if (Tracking)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, QuaternionFinal, _rotationSpeed * Time.deltaTime);
+            }
+        }
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, QuaternionFinal, _rotationSpeed * Time.deltaTime);
+        public void OnToggle()
+        {
+            Tracking = !Tracking;
         }
     }
 }
