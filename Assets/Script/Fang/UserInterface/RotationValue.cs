@@ -16,12 +16,12 @@ public class RotationValue : MonoBehaviour
         
     }
 
-    void OnGUI()
-    {
-        GUIStyle style = new GUIStyle();
-        style.fontSize = 24;
-        //GUI.Label(new Rect(10, 0, 0, 0), "Rotating on X:" + x + " Y:" + y + " Z:" + z, style);
+    //void OnGUI()
+    //{
+    //    GUIStyle style = new GUIStyle();
+    //    style.fontSize = 24;
+    //    //GUI.Label(new Rect(10, 0, 0, 0), "Rotating on X:" + x + " Y:" + y + " Z:" + z, style);
 
-        GUI.Label(new Rect(10, 25, 0, 0), "Transform.eulerAngle: " + transform.eulerAngles, style);
-    }
+    //    GUI.Label(new Rect(10, 25, 0, 0), "Transform.eulerAngle: " + transform.eulerAngles, style);
+    //}
 }

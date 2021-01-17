@@ -13,14 +13,14 @@
 
         void Start()
         {
-            infoPanel.SetActive(false);
+            infoPanel.SetActive(true);
             infoButton.onClick.AddListener(Info);
         }
 
         public void Info()
         {
             infoOn = !infoOn;
-            infoPanel.SetActive(infoOn);
+            infoPanel.SetActive(!infoOn);
         }
     }
 }
