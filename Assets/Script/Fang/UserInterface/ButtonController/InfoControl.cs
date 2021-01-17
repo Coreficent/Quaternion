@@ -11,16 +11,21 @@
         public GameObject infoPanel;
         public Button infoButton;
 
+        public AudioSource audioSource;
+        public AudioClip impact;
+
         void Start()
         {
-            infoPanel.SetActive(true);
+
+            infoPanel.SetActive(false);
             infoButton.onClick.AddListener(Info);
         }
 
         public void Info()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             infoOn = !infoOn;
-            infoPanel.SetActive(!infoOn);
+            infoPanel.SetActive(infoOn);
         }
     }
 }

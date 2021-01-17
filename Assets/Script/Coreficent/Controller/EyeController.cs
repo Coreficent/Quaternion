@@ -12,6 +12,9 @@
         [SerializeField] private GameObject _target;
         [SerializeField] private float _rotationSpeed = 45.0f;
 
+        public AudioSource audioSource;
+        public AudioClip impact;
+
         public Quaternion QuaternionCurrent
         {
             get => transform.rotation;
@@ -54,6 +57,7 @@
 
         public void OnToggle()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             Tracking = !Tracking;
         }
 

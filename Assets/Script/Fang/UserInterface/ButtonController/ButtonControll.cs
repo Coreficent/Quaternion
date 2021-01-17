@@ -12,6 +12,9 @@
         public Button eyeViewButton;
         public Button mathViewButton;
 
+        public AudioSource audioSource;
+        public AudioClip impact;
+
         void Start()
         {
             cameraControlScript = FindObjectOfType<CameraControl>();
@@ -28,12 +31,14 @@
 
         public void EyeView()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             cameraControlScript.bubbleCamera.SetActive(false);
             cameraControlScript.VisualCamera.SetActive(true);
         }
 
         public void MathView()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             cameraControlScript.VisualCamera.SetActive(false);
             cameraControlScript.bubbleCamera.SetActive(true);
         }

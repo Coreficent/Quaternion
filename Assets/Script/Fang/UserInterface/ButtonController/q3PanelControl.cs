@@ -36,7 +36,8 @@
         public GameObject leftArrowSet;
         public GameObject rightArrowSet;
 
-
+        public AudioSource audioSource;
+        public AudioClip impact;
 
         void Start()
         {
@@ -59,6 +60,7 @@
 
         public void ShowRightEye()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             rightEyePanel.SetActive(true);
             q3rightEyePanel.SetActive(true);
 
@@ -76,6 +78,7 @@
 
         public void ShowLeftEye()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             leftEyePanel.SetActive(true);
             q3leftEyePanel.SetActive(true);
             leftCircle.SetActive(true);
@@ -96,6 +99,7 @@
 
         public void Showq3RightEye()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             q3rightOn =!q3rightOn;
 
             q3rightEyePanel.SetActive(!q3rightOn);
@@ -105,6 +109,7 @@
 
         public void Showq3LeftEye()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             q3leftOn = !q3leftOn;
             q3rightEyePanel.SetActive(false);
             q3leftEyePanel.SetActive(!q3leftOn);
@@ -122,6 +127,7 @@
 
         public void ShowqBothCircle()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             leftArrowSet.SetActive(true);
             rightArrowSet.SetActive(true);
             leftCircle.SetActive(true);

@@ -17,6 +17,9 @@ using UnityEngine.UI;
 
         private bool bodyOn;
 
+        public AudioSource audioSource;
+        public AudioClip impact;
+
         void Start()
         {
             leftEyePanel.SetActive(false);
@@ -28,18 +31,21 @@ using UnityEngine.UI;
 
         public void ShowRightEye()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             rightEyePanel.SetActive(true);
             leftEyePanel.SetActive(false);
         }
 
         public void ShowLeftEye()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             leftEyePanel.SetActive(true);
             rightEyePanel.SetActive(false);
         }
 
         public void ShowBody()
         {
+            audioSource.PlayOneShot(impact, 0.5F);
             bodyOn = !bodyOn;
             bodyPanel.SetActive(bodyOn);
         }
